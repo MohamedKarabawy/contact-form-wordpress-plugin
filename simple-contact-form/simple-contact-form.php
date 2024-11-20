@@ -16,30 +16,30 @@ function simple_contact_form()
     $content = '';
 	
     if(isset($_POST['simple_contact_form_submit']))
-    $content .= '<h3>Thank you For Submiting Your Infomration.</h3>';
-
-    $content .= '<form method="post" action="https://'.$_SERVER["HTTP_HOST"].add_query_arg( $wp->query_vars ).'" enctype="multipart/form-data">';
-
-    $content .= '<label for="full_name">Name </label>';
-    $content .= '<input type="text" name="full_name" id="full_name" class="form-control" placeholder="Enter Your Name"><br>';
-
-
-    $content .= '<label for="email">Email </label>';
-    $content .= '<input type="email" name="email" id="email" class="form-control" placeholder="email@example.com"><br>';
-
-
-    $content .= '<label for="phone">Phone </label>';
-    $content .= '<input type="text" name="phone" id="phone" class="form-control" placeholder="Phone Number"><br>';
-
-
-    $content .= '<label for="message">Message </label>';
-    $content .= '<textarea name="message" id="message" rows="10" class="form-control" style="resize:none" placeholder="Type Your Message..."></textarea><br>';
-
-    $content .= '<input type="submit" name="simple_contact_form_submit" id="phone" class="form-control" value="Send Message">';
-
-
-    $content .= '</from>';
+    {
+	    $content .= '<h3>Thank you For Submiting Your Infomration.</h3>';
 	
+	    $content .= '<form method="post" action="https://'.$_SERVER["HTTP_HOST"].add_query_arg( $wp->query_vars ).'" enctype="multipart/form-data">';
+	
+	    $content .= '<label for="full_name">Name </label>';
+	    $content .= '<input type="text" name="full_name" id="full_name" class="form-control" placeholder="Enter Your Name"><br>';
+	
+	
+	    $content .= '<label for="email">Email </label>';
+	    $content .= '<input type="email" name="email" id="email" class="form-control" placeholder="email@example.com"><br>';
+	
+	
+	    $content .= '<label for="phone">Phone </label>';
+	    $content .= '<input type="text" name="phone" id="phone" class="form-control" placeholder="Phone Number"><br>';
+	
+	
+	    $content .= '<label for="message">Message </label>';
+	    $content .= '<textarea name="message" id="message" rows="10" class="form-control" style="resize:none" placeholder="Type Your Message..."></textarea><br>';
+	
+	    $content .= '<input type="submit" name="simple_contact_form_submit" id="phone" class="form-control" value="Send Message">';
+	
+	    $content .= '</from>';
+    }
 
     return $content;
 }
